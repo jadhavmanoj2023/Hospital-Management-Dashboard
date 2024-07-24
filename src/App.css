@@ -574,3 +574,11 @@ input[type="time"]:before {
   color: #444;
   margin-right: 0.5em;
 }
+
+.fileChoose{
+  display: flex;
+  flex-direction: column;
+}
+.fileChoose1{
+  max-height: 50px;
+}

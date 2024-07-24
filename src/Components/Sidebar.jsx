@@ -44,7 +44,7 @@ const Sidebar = () => {
 
   const handleLogout = async () => {
     await axios
-      .get("https://hospital-management-backend-6v1yozd41-jadhavmanoj2023s-projects.vercel.app/api/v1/user/admin/logout", {
+      .get("https://hospital-management-backend-s3i5.onrender.com/api/v1/user/admin/logout", {
         withCredentials: true,
       })
       .then((res) => {
@@ -68,9 +68,9 @@ const Sidebar = () => {
           <RiLogoutBoxFill onClick={handleLogout} />
         </div>
       </nav>
-      <div
+      <div  className="wrapper"
         style={isAuthenticated ? { display: "none" } : { display: "flex" }}
-        className="wrapper"
+        
       >
         <GiHamburgerMenu className="hamburger" onClick={() => setShow(!show)} />
       </div>

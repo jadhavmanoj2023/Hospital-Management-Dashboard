@@ -59,7 +59,7 @@ const AddNewDoctor = () => {
       formData.append("docAvatarPreview", docAvatarPreview);
 
       const response = await axios.post(
-        "https://hospital-management-backend-6v1yozd41-jadhavmanoj2023s-projects.vercel.app/api/v1/user/doctor/addnew",
+        "https://hospital-management-backend-s3i5.onrender.com/api/v1/user/doctor/addnew",
         formData,
         {
           withCredentials: true,
@@ -83,14 +83,14 @@ const AddNewDoctor = () => {
         <h1 className="form-title">REGISTER A NEW DOCTOR</h1>
         <form onSubmit={handleAddNewdoctor}>
           <div className="first-wrapper">
-            <div>
+            <div className="fileChoose">
               <img
                 src={
                   docAvatarPreview ? `${docAvatarPreview}` : "/docHolder.jpg"
                 }
                 alt="doctor avatar"
               />
-              <input type="file" onChange={handleAvatar} />
+              <input type="file" onChange={handleAvatar} className="fileChoose1"/>
             </div>
             <div>
               <input
